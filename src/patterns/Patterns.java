@@ -5,6 +5,7 @@ import Estado.*;
 import Projetil.*;
 import Boss.*;
 import Observer.*;
+import Fase.*;
 
 public class Patterns {
 
@@ -12,7 +13,7 @@ public class Patterns {
        Projetil danounico = new Projetil();
        Personagem p1 = new Personagem();
        Projeteeis dano = new Projeteeis(danounico,danounico);
-       
+       Fase f = new Heroico();
         p1.addObservadores(new ObservaPersonagem());
         p1.andar();
         p1.atacar();
@@ -28,6 +29,9 @@ public class Patterns {
         boss.addObservadores(new ObservaChefao());
         boss.setVida(0,boss);
         boss.getAtaqueforte();
+        
+        
+        f.gerarFase();
     }
     
 }
